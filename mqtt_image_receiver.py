@@ -7,7 +7,7 @@ import base64
 broker = 'broker.hivemq.com'
 port = 1883
 topic = 'image'
-received_folder = 'received_images'
+received_folder = 'received_images' # change the directory/folder
 counter_file = 'image_counter.txt'
 
 # Set up logging
