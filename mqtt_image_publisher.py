@@ -10,7 +10,7 @@ port = 1883
 topic = 'image'
 image_counter_file = 'image_counter.txt'
 image_directory = './'
-processed_folder = 'processed_images'
+processed_folder = 'processed_images' #change the directory/folder
 
 # Set up logging
 logging.basicConfig(filename='image_capture_mqtt.log', level=logging.INFO,
