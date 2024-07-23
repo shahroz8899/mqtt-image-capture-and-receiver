@@ -1,0 +1,51 @@
+# System Prerequisites for MQTT Image Capture and Receiver
+
+1. **Python 3.x**
+   - Ensure Python 3.x is installed on your system. Python 3.6 or later is recommended.
+   - Download and install Python from the [official Python website](https://www.python.org/downloads/).
+
+2. **pip (Python Package Installer)**
+   - `pip` should be included with Python 3.x. Verify installation with:
+     ```bash
+     pip --version
+     ```
+   - If `pip` is not installed, follow the installation instructions at the [pip installation guide](https://pip.pypa.io/en/stable/installation/).
+
+3. **fswebcam**
+   - `fswebcam` is used to capture images from a webcam.
+   - On Debian-based systems (e.g., Ubuntu), install `fswebcam` with:
+     ```bash
+     sudo apt-get update
+     sudo apt-get install fswebcam
+     ```
+   - For other operating systems, consult the [fswebcam documentation](https://github.com/fsphil/fswebcam) for installation instructions.
+
+4. **MQTT Broker Access**
+   - The scripts use the MQTT broker at `broker.hivemq.com`. Ensure you have access to this broker or modify the script to use a different broker if necessary.
+
+5. **Virtual Environment (Optional but Recommended)**
+   - It is recommended to use a virtual environment to manage Python dependencies.
+   - Create a virtual environment:
+     ```bash
+     python3 -m venv myenv
+     ```
+   - Activate the virtual environment:
+     - On macOS/Linux:
+       ```bash
+       source myenv/bin/activate
+       ```
+     - On Windows:
+       ```bash
+       myenv\Scripts\activate
+       ```
+
+6. **Install Python Dependencies**
+   - After setting up the virtual environment, install the required Python packages:
+     ```bash
+     pip install -r requirements.txt
+     ```
+
+7. **Check Your MQTT Broker Configuration**
+   - Ensure that your MQTT broker configuration in the scripts (`broker = 'broker.hivemq.com'` and `topic = 'image'`) matches your setup. Adjust these settings as needed based on your MQTT broker.
+
+By following these prerequisites, you will prepare your system to run the MQTT image capture and receiver scripts effectively.
