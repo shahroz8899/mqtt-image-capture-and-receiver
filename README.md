@@ -1,4 +1,4 @@
-# mqtt-image-capture-and-reception
+# mqtt-image-capture-and-receiver
 MQTT-based image capture and reception system using Python
 
 
@@ -16,8 +16,8 @@ This project consists of two Python scripts using MQTT to capture images from a 
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/shahroz8899/mqtt-image-capture-and-reception.git
-    cd mqtt-image-capture-and-reception
+    git clone https://github.com/shahroz8899/mqtt-image-capture-and-Receiver.git
+    cd mqtt-image-capture-and-Receiver
     ```
 
 2. Create and activate a virtual environment:
