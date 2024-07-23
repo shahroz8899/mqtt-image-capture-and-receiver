@@ -17,7 +17,7 @@ This project consists of two Python scripts using MQTT to capture images from a 
 
     ```bash
     git clone https://github.com/shahroz8899/mqtt-image-capture-and-reception.git
-    cd mqtt-image-capture
+    cd mqtt-image-capture-and-reception
     ```
 
 2. Create and activate a virtual environment:
