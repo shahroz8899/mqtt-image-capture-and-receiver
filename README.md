@@ -9,7 +9,12 @@ This project consists of two Python scripts using MQTT to capture images from a 
 ## Prerequisites
 
 - Python 3.x
+
+- sudo apt install python3.x
+
 - `paho-mqtt` library
+- 
+- pip install paho-mqtt
 
 ## Installation
 
