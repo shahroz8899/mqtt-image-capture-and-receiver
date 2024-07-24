@@ -2,14 +2,19 @@
 
 1. **Python 3.x**
    - Ensure Python 3.x is installed on your system. Python 3.6 or later is recommended.
-   - Download and install Python from the [official Python website](https://www.python.org/downloads/).
+   - If not install using
+
+sudo apt update
+sudo apt install python3
+python3 --version
 
 2. **pip (Python Package Installer)**
    - `pip` should be included with Python 3.x. Verify installation with:
      ```bash
+     sudo apt install python3-pip
      pip --version
      ```
-   - If `pip` is not installed, follow the installation instructions at the [pip installation guide](https://pip.pypa.io/en/stable/installation/).
+  
 
 3. **fswebcam**
    - `fswebcam` is used to capture images from a webcam.
@@ -25,11 +30,6 @@
 
 5. **Virtual Environment (Optional but Recommended)**
    
-
-
-This guide will help you set up a Python virtual environment and configure Thonny to use this environment.
-
-
 - Ensure Python 3.x is installed on your system.
 - Thonny IDE installed.
 
@@ -116,10 +116,6 @@ This guide will help you set up a Python virtual environment and configure Thonn
      Ensure `paho-mqtt` is listed among the installed packages.
 
 By following these steps, you should have a fully configured virtual environment and Thonny IDE setup to use it.
-```
-
-
-       ```
 
 
 
