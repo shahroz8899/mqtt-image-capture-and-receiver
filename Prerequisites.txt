@@ -24,28 +24,106 @@
    - The scripts use the MQTT broker at `broker.hivemq.com`. Ensure you have access to this broker or modify the script to use a different broker if necessary.
 
 5. **Virtual Environment (Optional but Recommended)**
-   - It is recommended to use a virtual environment to manage Python dependencies.
-   - Create a virtual environment:
-     ```bash
-     python3 -m venv myenv
+   
+
+
+This guide will help you set up a Python virtual environment and configure Thonny to use this environment.
+
+
+- Ensure Python 3.x is installed on your system.
+- Thonny IDE installed.
+
+## Setting Up a Virtual Environment
+
+1. **Open Terminal**:
+   - On Linux/macOS: Open Terminal.
+   - On Windows: Open Command Prompt or PowerShell.
+
+2. **Navigate to Your Project Directory**:
+   ```sh
+   cd /path/to/your/project
+   ```
+
+3. **Create a Virtual Environment**:
+   ```sh
+   python3 -m venv myenv
+   ```
+   This will create a directory named `myenv` in your project directory.
+
+4. **Activate the Virtual Environment**:
+   - On Linux/macOS:
+     ```sh
+     source myenv/bin/activate
      ```
-   - Activate the virtual environment:
-     - On macOS/Linux:
-       ```bash
-       source myenv/bin/activate
-       ```
-     - On Windows:
-       ```bash
-       myenv\Scripts\activate
+   - On Windows:
+     ```sh
+     myenv\Scripts\activate
+     ```
+
+5. **Install Required Packages**:
+   ```sh
+   pip install paho-mqtt
+   ```
+
+6. **Verify Installation**:
+   ```sh
+   pip list
+   ```
+   Ensure `paho-mqtt` is listed among the installed packages.
+
+## Configuring Thonny to Use the Virtual Environment
+
+1. **Open Thonny**.
+
+2. **Open Thonny's Settings**:
+   - Click on "Tools" in the menu bar.
+   - Select "Options" (or "Preferences").
+
+3. **Select the Interpreter Tab**:
+   - Go to the "Interpreter" tab.
+
+4. **Configure the Interpreter**:
+   - Select "Alternative Python 3 interpreter".
+   - Click on "Select interpreter ".
+   - Navigate to your virtual environment and select the Python interpreter located at:
+     - `myenv/bin/python3` on Linux/macOS.
+     - `myenv\Scripts\python.exe` on Windows.
+
+5. **Apply and Restart Thonny**:
+   - Click "OK" or "Apply" to save the changes.
+   - Restart Thonny to ensure the changes take effect.
+
+## Running Your Script in Thonny
+
+1. **Open Your Script in Thonny**:
+   - Open `mqtt_image_publisher.py` or any other script you wish to run.
+
+2. **Run the Script**:
+   - Click on the "Run" button or press `F5`.
+
+3. **Verify Environment in Thonny**:
+   - Open Thonny's interactive shell.
+   - Type the following commands to check the Python path and installed packages:
+     ```python
+     import sys
+     sys.executable
+     ```
+     This should point to your virtual environment's Python executable.
+
+     ```python
+     !pip list
+     ```
+     Ensure `paho-mqtt` is listed among the installed packages.
+
+By following these steps, you should have a fully configured virtual environment and Thonny IDE setup to use it.
+```
+
+
        ```
 
-6. **Install Python Dependencies**
-   - After setting up the virtual environment, install the required Python packages:
-     ```bash
-     pip install -r requirements.txt
-     ```
 
-7. **Check Your MQTT Broker Configuration**
+
+6. **Check Your MQTT Broker Configuration**
    - Ensure that your MQTT broker configuration in the scripts (`broker = 'broker.hivemq.com'` and `topic = 'image'`) matches your setup. Adjust these settings as needed based on your MQTT broker.
 
 By following these prerequisites, you will prepare your system to run the MQTT image capture and receiver scripts effectively.
